@@ -1,0 +1,23 @@
+<div class="about" [@fadeInOnEnter]>
+ <app-imgfrag id="about" titlePage="About Page"
+  url="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+ </app-imgfrag>
+
+ <div class="container">
+
+  <div class="row" [@fadeInOnEnter]>
+
+   <div *ngFor="let item of userList" class="col-lg-4">
+
+    <title>Placeholder</title>
+    <img src={{item.avatar}} class="rounded-circle" />
+
+    <h2>{{item.first_name}} {{item.last_name}}</h2>
+    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut
+     id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+   </div>
+  </div>
+ </div>
+
+</div>

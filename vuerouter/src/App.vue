@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Navbar />
+    <transition-group name="fade">
+      <router-view key="routes" />
+    </transition-group>
+    <Footer />
   </div>
 </template>
+<script>
+import Navbar from "./components/partials/Navbar";
+import Footer from "./components/partials/Footer";
 
+export default {
+  components: { Navbar, Footer }
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
